@@ -44,7 +44,7 @@
               </div>
             </div>
 
-            <b-button @click="save">Save</b-button>
+            <b-button type="is-success" @click="save">Save</b-button>
           </div>
         </div>
       </section>
@@ -144,7 +144,7 @@ export default {
         const newPoint = { ...point };
         newPoint.data.text = statStrings.join(" ");
         delete newPoint.parsed;
-        console.log("lots of these", newPoint);
+
         return newPoint;
       });
 
