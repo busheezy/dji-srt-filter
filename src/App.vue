@@ -9,7 +9,12 @@
             class="file is-primary is-centered"
             :class="{ 'has-name': !!file }"
           >
-            <b-upload v-model="file" @input="onInput" class="file-label">
+            <b-upload
+              v-model="file"
+              @input="onInput"
+              accept=".srt"
+              class="file-label"
+            >
               <span class="file-cta">
                 <span class="file-label">Click to upload</span>
               </span>
