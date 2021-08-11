@@ -20,6 +20,8 @@
           </b-field>
 
           <div v-if="file">
+            <div class="tag is-info">Drag and drop to change order.</div>
+
             <div class="columns">
               <div class="column">
                 <span class="subtitle">Disabled</span>
