@@ -25,7 +25,7 @@
             <div class="columns">
               <div class="column">
                 <span class="subtitle">Disabled</span>
-                <draggable class="list-group" :list="disabled" group="stats">
+                <draggable class="drag-area" :list="disabled" group="stats">
                   <div v-for="stat in disabled" :key="stat.name">
                     <b-button class="is-fullwidth mb-1">
                       {{ stat.label }}
@@ -36,7 +36,7 @@
 
               <div class="column">
                 <span class="subtitle">Enabled</span>
-                <draggable class="list-group" :list="enabled" group="stats">
+                <draggable class="drag-area" :list="enabled" group="stats">
                   <div v-for="stat in enabled" :key="stat.name">
                     <b-button class="is-fullwidth mb-1">
                       {{ stat.label }}
@@ -53,6 +53,12 @@
     </div>
   </div>
 </template>
+
+<style>
+.drag-area {
+  height: 100%;
+}
+</style>
 
 <script>
 import { find, each, map } from "lodash";
